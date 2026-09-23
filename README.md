@@ -115,10 +115,9 @@ Run frontend and backend concurrently:
 ```bash
 pnpm dev
 ```
-
-- **Frontend Storefront**: [http://localhost:3000]
-- **Backend API**: [http://localhost:5000]
-- **Health Check Endpoint**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- **Frontend Storefront**: http://localhost:3000
+- **Backend API**: http://localhost:5000
+- **Health Check Endpoint**:http://localhost:5000/api/health
 
 ### Individual Package Commands
 
