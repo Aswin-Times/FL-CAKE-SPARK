@@ -1,0 +1,26 @@
+{
+  "name": "cake-spark",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production-ready full-stack web application for CAKE SPARK custom-cake ordering and e-commerce platform",
+  "packageManager": "pnpm@11.15.1",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"blue.bold,green.bold\" \"pnpm --filter @cake-spark/backend dev\" \"pnpm --filter @cake-spark/frontend dev\"",
+    "dev:frontend": "pnpm --filter @cake-spark/frontend dev",
+    "dev:backend": "pnpm --filter @cake-spark/backend dev",
+    "build": "pnpm --filter @cake-spark/shared build && pnpm --recursive --filter !@cake-spark/shared run build",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:generate": "pnpm --filter @cake-spark/database db:generate",
+    "db:migrate": "pnpm --filter @cake-spark/database db:migrate",
+    "db:seed": "pnpm --filter @cake-spark/database db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
+  }
+}

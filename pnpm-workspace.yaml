@@ -1,0 +1,19 @@
+packages:
+  - 'frontend'
+  - 'backend'
+  - 'database'
+  - 'shared'
+
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  unrs-resolver: true
+
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - 'esbuild'
+  - 'prisma'
+  - 'unrs-resolver'
